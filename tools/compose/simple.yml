@@ -69,14 +69,17 @@ services:
 
       # -- Database (Postgres) --
       # DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
+      DATABASE_URL: ${DATABASE_URL}
 
       # -- Auth --
       ACCESS_TOKEN_SECRET: access_token_secret
       REFRESH_TOKEN_SECRET: refresh_token_secret
 
       # -- Emails --
-      MAIL_FROM: noreply@localhost
+      # MAIL_FROM: noreply@localhost
+      MAIL_FROM: ${MAIL_FROM}
       # SMTP_URL: smtp://user:pass@smtp:587 # Optional
+      SMTP_URL: ${SMTP_URL} # Optional
 
       # -- Storage (Minio) --
       STORAGE_ENDPOINT: minio
